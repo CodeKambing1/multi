@@ -1,14 +1,6 @@
 #!/bin/bash
 clear
 ipes=$(curl -sS ipv4.icanhazip.com)
-surat=$(curl -sS https://raw.githubusercontent.com/CodeKambing1/access/main/ip | grep -w $ipes | awk '{print $3}')
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-if [[ "$surat" = "true" ]]; then
-  echo -ne
-else
-  red "You cant use this bot panel !"
-  exit 0
-fi
 
 [[ ! -f /usr/bin/jq ]] && {
   red "Downloading jq file!"
