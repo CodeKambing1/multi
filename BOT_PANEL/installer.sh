@@ -2,6 +2,7 @@
 clear
 ipes=$(curl -sS ipv4.icanhazip.com)
 
+
 [[ ! -f /usr/bin/jq ]] && {
   red "Downloading jq file!"
   wget -q --no-check-certificate "https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64" -O /usr/bin/jq
@@ -42,7 +43,7 @@ EOF
     echo -e "Info...\n"
     fun_bot1() {
       [[ ! -e "/etc/.maAsiss/.Shellbtsss" ]] && {
-        wget -qO- https://raw.githubusercontent.com/techsolution11/multiport/main/BOT_PANEL/BotAPI.sh >/etc/.maAsiss/.Shellbtsss
+        wget -qO- https://raw.githubusercontent.com/CodeKambing1/multi/main/BOT_PANEL/BotAPI.sh >/etc/.maAsiss/.Shellbtsss
       }
       [[ "$(grep -wc "sam_bot" "/etc/rc.local")" = '0' ]] && {
         sed -i '$ i\screen -dmS sam_bot bbt' /etc/rc.local >/dev/null 2>&1
